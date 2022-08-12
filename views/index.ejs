@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+</head>
+<style>
+  body{
+    background-color: rgb(1, 1, 8);
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto 10%;
+  }
+  h1{
+    color: rgb(183, 74, 35);
+    font-size: 3rem;
+  }
+  p{
+    color: white;
+    margin-right: 20px;
+    font-size: 1.5rem;
+    width: 20px;
+  }
+
+  p a{
+    color: rgb(195, 20, 20);
+    text-decoration: none;
+  }
+  
+  ul li{
+    display: flex;
+    color: bisque;
+    height: 10vh;
+    background-color: rgba(255, 255, 255, 0.123);
+    padding: 3px 31px;
+    width: auto;
+    border-radius: 5px;
+    /* overflow: hidden; */
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  form{
+    margin: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    
+  }
+  input{
+    margin-bottom: 1rem;
+    height: 3rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.123);
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  button{
+    width: 10vw;
+    height: 2.5rem;
+    border: none;
+    outline: none;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+  }
+</style>
+<body>
+  <h1><%= title %></h1>
+  <form action="/create-contact" method = "post" class="add-contacts">
+    <input type="text" name="name" placeholder="Enter Name" required>
+    <input type="number" name="phone" placeholder="Enter phone" required>
+
+    <button type="submit">Add Contact</button>
+
+  </form>
+  <div class="contact-list">
+    <ul>
+      <% for( let i of contact_list){ %>
+        <li>
+          <p><%= i.name %></p>
+          <p><%= i.phone %></p>
+          <p><a href="" method = "delete" ><Strong>X</Strong></a></p>
+        </li>
+        
+      <% } %>
+    </ul>
+  </div>
+</body>
+</html>
