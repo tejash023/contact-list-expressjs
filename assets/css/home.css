@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(1, 1, 8);
+  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: auto 31%;
+}
+h1{
+  color: blueviolet;
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem;
+}
+h1 i {
+  margin-right: 10px;
+}
+p{
+  color: white;
+  margin-right: 20px;
+  font-size: 1.5rem;
+  
+}
+
+p a{
+  color: rgb(195, 20, 20);
+  text-decoration: none;
+}
+
+ul li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: bisque;
+  height: 10vh;
+  background-color: rgba(255, 255, 255, 0.123);
+  padding: 3px 31px;
+  width: auto;
+  border-radius: 5px;
+  /* overflow: hidden; */
+  margin-bottom: 20px;
+  text-decoration: none;
+  transition: all 0.5sec ease-in-out;
+}
+
+.contact-list-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30vw;
+}
+
+ul li:hover{
+  background-color: blueviolet;
+}
+
+a{
+  color: rgb(148, 39, 39);
+}
+
+form{
+  
+  display: flex;
+  flex-direction: row;
+ 
+  
+}
+input{
+  margin-right: 10px;
+  height: 3rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.123);
+  padding: 5px 12px;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+}
+
+button{
+  
+  height: 3rem;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 5px;
+  width: 160px;
+  font-size: 1rem;
+}
+
+button:hover{
+  background-color: rgb(84, 24, 139);
+}
+
+@media only screen and (max-width:950px) {
+
+  body{
+   
+    margin: auto 20%;
+  }
+
+  form{
+  
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  input{
+    margin-right: 0;
+    margin-bottom: 10px;
+    
+  }
+  
+}
+
+@media only screen and (max-width:600px) {
+
+  body{
+   
+    margin: auto 15%;
+  }
+
+  h1{
+    font-size: 1.5rem;
+  }
+  
+}
